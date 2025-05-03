@@ -20,7 +20,7 @@ builder.Services.AddDbContext<WeatherDbContext>(options =>
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IWeatherService, OpenMeteoWeatherService>();
 builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
-builder.Services.AddScoped<IWeatherDataService, WeatherDataService>();
+builder.Services.AddScoped<WeatherDataService>();
 builder.Services.AddMemoryCache();
 
 var app = builder.Build();

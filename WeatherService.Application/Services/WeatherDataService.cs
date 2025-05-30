@@ -7,7 +7,7 @@ using WeatherService.Core.Interfaces;
 
 namespace WeatherService.Application.Services
 {
-    public class WeatherDataService : IWeatherDataService
+    public class WeatherDataService
     {
         private readonly IWeatherService _weatherService;
         private readonly IWeatherRepository _weatherRepository;

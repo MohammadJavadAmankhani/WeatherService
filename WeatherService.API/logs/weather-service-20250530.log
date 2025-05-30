@@ -1,0 +1,22 @@
+2025-05-30 14:36:51.361 +03:30 [INF] Starting WeatherService application
+2025-05-30 14:37:14.832 +03:30 [INF] Start processing HTTP request GET https://api.open-meteo.com/v1/forecast?*
+2025-05-30 14:37:14.838 +03:30 [INF] Sending HTTP request GET https://api.open-meteo.com/v1/forecast?*
+2025-05-30 14:37:15.491 +03:30 [INF] Received HTTP response headers after 650.0448ms - 200
+2025-05-30 14:37:15.494 +03:30 [INF] End processing HTTP request after 668.6743ms - 200
+2025-05-30 14:37:50.486 +03:30 [INF] Starting WeatherService application
+2025-05-30 14:37:58.407 +03:30 [INF] Start processing HTTP request GET https://api.open-meteo.com/v1/forecst?*
+2025-05-30 14:37:58.415 +03:30 [INF] Sending HTTP request GET https://api.open-meteo.com/v1/forecst?*
+2025-05-30 14:37:58.960 +03:30 [INF] Received HTTP response headers after 541.998ms - 404
+2025-05-30 14:37:58.964 +03:30 [INF] End processing HTTP request after 563.0225ms - 404
+2025-05-30 14:38:34.420 +03:30 [INF] Starting WeatherService application
+2025-05-30 14:38:58.467 +03:30 [INF] Start processing HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:38:58.473 +03:30 [INF] Sending HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:38:58.694 +03:30 [WRN] Http retry 1 after 2000ms
+2025-05-30 14:39:00.711 +03:30 [INF] Start processing HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:39:00.713 +03:30 [INF] Sending HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:39:00.772 +03:30 [WRN] Http retry 2 after 4000ms
+2025-05-30 14:39:04.783 +03:30 [INF] Start processing HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:39:04.784 +03:30 [INF] Sending HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:39:04.873 +03:30 [WRN] Http retry 3 after 8000ms
+2025-05-30 14:39:12.890 +03:30 [INF] Start processing HTTP request GET https://api.ope-meteo.com/v1/forecst?*
+2025-05-30 14:39:12.891 +03:30 [INF] Sending HTTP request GET https://api.ope-meteo.com/v1/forecst?*

@@ -1,6 +1,8 @@
 ﻿using Moq;
 using Moq.Protected;
+using Polly;
 using System.Net;
+using WeatherService.Infrastructure.Resilience;
 using WeatherService.Infrastructure.Services;
 
 namespace WeatherService.Tests.Unite_Tests
@@ -10,6 +12,7 @@ namespace WeatherService.Tests.Unite_Tests
         private readonly Mock<IHttpClientFactory> _httpClientFactoryMock;
         private readonly OpenMeteoWeatherService _weatherService;
         private readonly Mock<HttpMessageHandler> _httpMessageHandlerMock;
+        private readonly Mock<IPolicyFactory> _policyFactoryMock;
 
         public OpenMeteoWeatherServiceTests()
         {
@@ -19,7 +22,12 @@ namespace WeatherService.Tests.Unite_Tests
             _httpClientFactoryMock.Setup(x => x.CreateClient(It.IsAny<string>()))
                 .Returns(httpClient);
 
-            _weatherService = new OpenMeteoWeatherService(_httpClientFactoryMock.Object);
+            _policyFactoryMock = new Mock<IPolicyFactory>();
+            var noOpPolicy = Policy.NoOpAsync<HttpResponseMessage>();
+            _policyFactoryMock.Setup(x => x.CreateHttpPolicy())
+                .Returns(noOpPolicy);
+
+            _weatherService = new OpenMeteoWeatherService(_httpClientFactoryMock.Object, _policyFactoryMock.Object);
         }
 
         [Fact]
